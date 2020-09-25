@@ -36,19 +36,29 @@ function getCountryName(data) {
 function renderChart(data, labels, countryName) {
     var ctx = document.getElementById('myChart').getContext('2d');
 
+    var gradientStroke = ctx.createLinearGradient(500, 0, 100, 0);
+    gradientStroke.addColorStop(0, '#80b6f4');
+    
+    gradientStroke.addColorStop(1, '#f49080');
+
     if (currentChart) {
         // Clear the previous chart if it exists
         currentChart.destroy();
     }
     currentChart = new Chart(ctx, {
-        type: 'line',
+        type: 'bar',
         data: {
             labels: labels,
             datasets: [{
                 label: 'Population, ' + countryName,
                 data: data,
-                borderColor: 'rgba(75, 192, 192, 1)',
-                backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                // borderColor: 'rgba(75, 192, 192, 1)',
+                // backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                borderColor: gradientStroke,
+                pointBorderColor: gradientStroke,
+                pointBackgroundColor: gradientStroke,
+                pointHoverBackgroundColor: gradientStroke,
+                pointHoverBorderColor: gradientStroke,
             }]
         },
         options: {

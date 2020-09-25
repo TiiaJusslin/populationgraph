@@ -50,3 +50,9 @@ footer {
     margin-top: 20px;
 
 }
+a:link {
+    color: purple;
+}
+a:hover{
+    color:  rgb(153, 61, 228); 
+}
