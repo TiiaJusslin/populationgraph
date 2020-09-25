@@ -4,3 +4,36 @@
 .container {
     width: 75vw;
 }
+h1 {
+    font-family:"Poppins";
+    color: purple; 
+}
+.button {
+    color:blue;
+    background-color:paleturquoise; 
+    padding: 5px 3px;
+    margin: 15px; 
+    font-family:"Poppins";
+    font-weight: lighter;
+    border: black solid 1px;
+    border-radius: .5vw;
+}
+.button:hover{
+    background-color: blue;
+    color: paleturquoise;
+}
+p {
+    font-family:"Poppins";
+    font-weight: lighter;
+}
+img {
+    border: black solid 2px; 
+    border-radius: 20px; 
+    max-width: 50vw;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    margin-top: 5px;
+    margin-bottom: 5px;
+
+}
