@@ -41,12 +41,12 @@ function getIndicatorName(data) {
 function renderChart(data, labels, countryName) {
     var ctx = document.getElementById('myChart').getContext('2d');
 
-    var gradientStroke = ctx.createLinearGradient(0, 0, 600, 0);
-    gradientStroke.addColorStop(0, 'black');
+    // var gradientStroke = ctx.createLinearGradient(0, 0, 600, 0);
+    // gradientStroke.addColorStop(0, 'black');
 
-    gradientStroke.addColorStop(0.5, 'purple');
+    // gradientStroke.addColorStop(0.5, 'purple');
     
-    gradientStroke.addColorStop(1, 'white');
+    // gradientStroke.addColorStop(1, 'white');
 
     if (currentChart) {
         // Clear the previous chart if it exists
@@ -59,13 +59,13 @@ function renderChart(data, labels, countryName) {
             datasets: [{
                 label: 'Population, ' + countryName,
                 data: data,
-                // borderColor: 'rgba(75, 192, 192, 1)',
-                // backgroundColor: 'rgba(75, 192, 192, 0.2)',
-                borderColor: gradientStroke,
-                pointBorderColor: gradientStroke,
-                pointBackgroundColor: gradientStroke,
-                pointHoverBackgroundColor: gradientStroke,
-                pointHoverBorderColor: gradientStroke,
+                borderColor: 'rgba(75, 192, 192, 1)',
+                backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                // borderColor: gradientStroke,
+                // pointBorderColor: gradientStroke,
+                // pointBackgroundColor: gradientStroke,
+                // pointHoverBackgroundColor: gradientStroke,
+                // pointHoverBorderColor: gradientStroke,
             }]
         },
         options: {
