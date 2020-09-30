@@ -40,14 +40,13 @@ img {
     margin-bottom: 5px;
 }
 footer {
-    display: block;
     max-width: 100vw;
     text-align: center;
     font-family: "Poppins";
     background-color: rgb(153, 61, 228);
     color: whitesmoke;
-    height: 30px; 
-    margin-top: 20px;
+    padding: 10px 20px; 
+
 
 }
 a:link {

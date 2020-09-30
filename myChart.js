@@ -33,13 +33,20 @@ function getCountryName(data) {
     var countryName = data[1][0].country.value;
     return countryName;
 }
+
+function getIndicatorName(data) {
+    var indicatorName = data[1][0].indicator.value;
+}
+
 function renderChart(data, labels, countryName) {
     var ctx = document.getElementById('myChart').getContext('2d');
 
-    var gradientStroke = ctx.createLinearGradient(500, 0, 100, 0);
-    gradientStroke.addColorStop(0, '#80b6f4');
+    var gradientStroke = ctx.createLinearGradient(0, 0, 600, 0);
+    gradientStroke.addColorStop(0, 'black');
+
+    gradientStroke.addColorStop(0.5, 'purple');
     
-    gradientStroke.addColorStop(1, '#f49080');
+    gradientStroke.addColorStop(1, 'white');
 
     if (currentChart) {
         // Clear the previous chart if it exists
@@ -62,6 +69,9 @@ function renderChart(data, labels, countryName) {
             }]
         },
         options: {
+            animation: {
+                duration: 10000
+            },
             scales: {
                 yAxes: [{
                     ticks: {
